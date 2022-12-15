@@ -1,9 +1,9 @@
-import { Injectable, Inject, NotFoundException } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 
 import { Notification } from './notification.model';
 import { PubSub } from 'graphql-subscriptions';
 import { PUB_SUB } from 'src/pubSub.module';
-import { NotificationToken } from './notification.token';
+import { NotificationToken } from '../token';
 
 @Injectable()
 export class NotificationsService {

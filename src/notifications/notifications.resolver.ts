@@ -1,16 +1,10 @@
 import { Injectable, Inject } from '@nestjs/common';
-import {
-  Resolver,
-  Subscription,
-  Query,
-  Args,
-  Int,
-} from '@nestjs/graphql';
+import { Resolver, Subscription, Query, Args, Int } from '@nestjs/graphql';
 import { PubSub } from 'graphql-subscriptions';
 import { PUB_SUB } from 'src/pubSub.module';
 import { Notification } from './notification.model';
 import { NotificationsService } from './notifications.service';
-import { NotificationToken } from './notification.token';
+import { NotificationToken } from '../token';
 
 @Resolver(() => Notification)
 @Injectable()
@@ -21,8 +15,8 @@ export class NotificationsResolver {
   ) {}
 
   @Query(() => String)
-  async hello(): Promise<String> {
-    return "Hello World!";
+  async hello(): Promise<string> {
+    return 'Hello World!';
   }
 
   @Subscription(() => Notification, {
