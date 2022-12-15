@@ -11,9 +11,7 @@ import { NotificationsService } from './notifications.service';
 dotenv.config();
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([Notification]),
-  ],
+  imports: [TypeOrmModule.forFeature([Notification])],
   controllers: [NotificationsController],
   providers: [
     {
