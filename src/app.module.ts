@@ -6,6 +6,7 @@ import { join } from 'path';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PubSubModule } from './pubSub.module';
 import { NotificationsModule } from './notifications/notifications.module';
+import { CoreModule } from './core/core.module';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -35,6 +36,7 @@ dotenv.config();
     }),
     PubSubModule,
     NotificationsModule,
+    CoreModule,
   ],
 })
 export class AppModule {}
