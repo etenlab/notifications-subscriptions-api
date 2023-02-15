@@ -8,6 +8,7 @@ import { PubSubModule } from './pubSub.module';
 import { NotificationsModule } from './notifications/notifications.module';
 import { CoreModule } from './core/core.module';
 import * as dotenv from 'dotenv';
+import { AppController } from './app.controller';
 dotenv.config();
 
 @Module({
@@ -39,5 +40,6 @@ dotenv.config();
     NotificationsModule,
     CoreModule,
   ],
+  controllers: [AppController],
 })
 export class AppModule {}
